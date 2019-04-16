@@ -532,14 +532,19 @@
       }
     }
 
-    @media screen and (max-height: 630px) {
+    @media screen and (max-height: 640px) {
+      .rating {
+        top: 100%;
+        margin-top: 60px;
+      }
+
       .rating .graphic {
         display: none;
       }
 
       .rating .total {
         display: block;
-        width: 80vw;
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -569,24 +574,30 @@
       .rating .total .users {
         display: table-cell;
         width: 100%;
-        font-size: 14px;
+        font-size: 18px;
         text-align: right;
       }
     }
 
-    @media screen and (max-height: 510px) {
+    @media screen and (max-height: 450px) {
       .rating {
         display: none;
       }
     }
 
-    @media screen and (max-height: 530px) {
+    @media screen and (max-height: 360px) {
+      .main .loading {
+        display: none;
+      }
+    }
+
+    @media screen and (max-height: 520px) {
       .main .loading h1 {
         display: none;
       }
     }
 
-    @media screen and (max-height: 410px) {
+    @media screen and (max-height: 380px) {
       .main .loading {
         display: none;
       }
@@ -674,11 +685,11 @@
           </div>
         </div>
       </div>
-      <a class="btn" id="btn" href="#">
+      <a class="btn" id="btn" href="#<TARIF_YES_URL>">
         <span>Скачать</span>
       </a>
       <div class="cancel">
-        <a href="#">
+        <a href="#<TARIF_NO_URL>">
           <span>Отмена</span>
         </a>
       </div>
@@ -720,7 +731,8 @@
 
 <div class="footer" id="footer">
   <p>
-    Нажатием на кнопку "Смотреть" Вы подтверждаете свое согласие с покупкой SERVICENAME и Условиями предоставления услуги. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8 800 333-89-81 (бесплатно в домашнем регионе) | <a href="#">Правила покупки поставщика услуг</a> | <a href="#">Личный кабинет</a>
+    Нажатием на кнопку "СКАЧАТЬ" Вы подтверждаете свое согласие с покупкой SERVICENAME и <a href="http://moscow.megafon.ru/download/~federal/oferts/short_numbers/Ofert
+a_Short_numbers_stf.pdf">Условиями предоставления услуги</a>. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href="ВАША ССЫЛКА НА ПРАВИЛА ПОКУПКИ">Правила покупки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a>
   </p>
 </div>
 
