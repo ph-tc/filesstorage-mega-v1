@@ -135,24 +135,6 @@
     }
 
 
-    /*OFFER*/
-
-    .offer {
-      display: table-row;
-      width: 100%;
-      font-size: 0;
-      text-align: center;
-    }
-
-    .offer span {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 9px;
-      line-height: 1;
-      color: #e3dede;
-      opacity: 0.6;
-    }
-
-
     /*HEADER--------------------------------------------------------------------*/
 
 
@@ -226,6 +208,13 @@
       height: 100%;
     }
 
+    .main > .inner {
+      display: table;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+
     .main .loading {
       position: absolute;
       left: 50%;
@@ -267,18 +256,35 @@
     .progress {
       padding: 6px;
       background-color: rgba(0, 0, 0, 0.25);
+      -webkit-border-radius: 6px;
       border-radius: 6px;
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
     }
 
     .progress-bar {
       height: 10px;
+      -webkit-border-radius: 4px;
       border-radius: 4px;
     }
 
     .progress-striped .progress-bar {
       background-color: #d2d2d2;
       width: 100%;
+      background-image: -webkit-linear-gradient(
+        45deg, #706E6D 20%,
+        transparent 20%, transparent 40%,
+        #706E6D 40%, #706E6D 60%,
+        transparent 60%, transparent 80%,
+        #706E6D 80%
+      );
+      background-image: -o-linear-gradient(
+        45deg, #706E6D 20%,
+        transparent 20%, transparent 40%,
+        #706E6D 40%, #706E6D 60%,
+        transparent 60%, transparent 80%,
+        #706E6D 80%
+      );
       background-image: linear-gradient(
         45deg, #706E6D 20%,
         transparent 20%, transparent 40%,
@@ -312,7 +318,7 @@
     .main .btn {
       position: relative;
       display: inline-block;
-      width: 90vw;
+      width: 80vw;
       height: 20vh;
       text-decoration: none;
       text-transform: uppercase;
@@ -355,37 +361,33 @@
       background-repeat: no-repeat;
     }
 
-    .main .cancel {
+    .main .price {
       position: absolute;
       top: 100%;
-      left: 0;
-      right: 0;
+      width: 100%;
       text-align: center;
     }
 
-    .main .cancel a {
-      display: inline-block;
-      padding: 2px 5px;
-      margin-top: 15px;
-      text-decoration: none;
-      text-transform: uppercase;
-      background: rgba(210, 210, 210, 0.3);
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
+    .main .price p {
+      margin-top: 5px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 22px;
+      line-height: 22px;
+      color: #e3dede;
+      opacity: 0.6;
     }
 
-    .main .cancel span {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 10px;
-      line-height: 1;
-      color: #fff;
+    /*Placeholder*/
+
+    .placeholder {
+      display: table-row;
+      width: 100%;
+      height: 100%;
     }
+
+    /*RATING------------------------------------*/
 
     .rating {
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 120%;
       display: table-row;
       width: 90vw;
       margin: 0 auto;
@@ -532,19 +534,14 @@
       }
     }
 
-    @media screen and (max-height: 640px) {
-      .rating {
-        top: 100%;
-        margin-top: 60px;
-      }
-
+    @media screen and (max-height: 540px) {
       .rating .graphic {
         display: none;
       }
 
       .rating .total {
         display: block;
-        width: 100%;
+        width: 80vw;
         margin: 0 auto;
       }
 
@@ -574,7 +571,7 @@
       .rating .total .users {
         display: table-cell;
         width: 100%;
-        font-size: 18px;
+        font-size: 14px;
         text-align: right;
       }
     }
@@ -586,18 +583,6 @@
     }
 
     @media screen and (max-height: 360px) {
-      .main .loading {
-        display: none;
-      }
-    }
-
-    @media screen and (max-height: 520px) {
-      .main .loading h1 {
-        display: none;
-      }
-    }
-
-    @media screen and (max-height: 380px) {
       .main .loading {
         display: none;
       }
@@ -615,9 +600,7 @@
         right: auto;
         left: auto;
         -webkit-transform: none;
-        -moz-transform: none;
         -ms-transform: none;
-        -o-transform: none;
         transform: none;
       }
     }
@@ -625,43 +608,37 @@
 
     /*FOOTER--------------------------------------------------------------------*/
 
-    .footer {
+    .rules {
       display: table-row;
     }
 
-    .footer p {
+    .rules .inner {
       padding: 2px;
     }
 
-    .footer p,
-    .footer a {
+    .rules span,
+    .rules a {
+      display: block;
       font-family: 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 10px;
-      line-height: 1;
+      font-size: 16px;
+      line-height: 16px;
       text-align: center;
       color: #e3dede;
       opacity: 0.6;
-    }
-
-    .footer a {
-      opacity: 1;
     }
   </style>
 </head>
 
 
 <body>
-<div class="offer">
-  <span>SERVICEPRICE. ACCOUNT. Доступ до EXPIRE-DATE.</span>
-</div>
 <div class="header">
   <div class="inner">
     <div class="menu">
       <button></button>
     </div>
     <div class="name">
-      <span>Файлы онлайн</span>
+      <span>Файлы Онлайн</span>
     </div>
     <div class="plus18 hidden"></div>
   </div>
@@ -669,6 +646,39 @@
 
 <div class="main">
   <div class="inner">
+    <div class="placeholder"></div>
+    <div class="rating">
+      <div class="total">
+        <span>4.9</span>
+        <div class="users">
+          Проголосовало:<br><span>2 356 843</span>
+        </div>
+      </div>
+      <div class="graphic">
+        <div class="inner">
+          <div class="row row-5">
+            <div class="label">5</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-4">
+            <div class="label">4</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-3">
+            <div class="label">3</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-2">
+            <div class="label">2</div>
+            <div class="visual"> </div>
+          </div>
+          <div class="row row-1">
+            <div class="label">1</div>
+            <div class="visual"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="btn-wrapper" id="btn-wrapper">
       <div class="loading">
         <h1>Файл загружен</h1>
@@ -685,55 +695,23 @@
           </div>
         </div>
       </div>
-      <a class="btn" id="btn" href="#<TARIF_YES_URL>">
+      <a class="btn" id="btn" href="#">
         <span>Скачать</span>
       </a>
-      <div class="cancel">
-        <a href="#<TARIF_NO_URL>">
-          <span>Отмена</span>
-        </a>
-      </div>
-      <div class="rating">
-        <div class="total">
-          <span>4.9</span>
-          <div class="users">
-            Проголосовало:<br><span>2 356 843</span>
-          </div>
-        </div>
-        <div class="graphic">
-          <div class="inner">
-            <div class="row row-5">
-              <div class="label">5</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-4">
-              <div class="label">4</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-3">
-              <div class="label">3</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-2">
-              <div class="label">2</div>
-              <div class="visual"> </div>
-            </div>
-            <div class="row row-1">
-              <div class="label">1</div>
-              <div class="visual"> </div>
-            </div>
-          </div>
-        </div>
+      <div class="price">
+        <p>Цена: 20 руб. за 1 день</p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="footer" id="footer">
-  <p>
-    Нажатием на кнопку "СКАЧАТЬ" Вы подтверждаете свое согласие с покупкой SERVICENAME и <a href="http://moscow.megafon.ru/download/~federal/oferts/short_numbers/Ofert
-a_Short_numbers_stf.pdf">Условиями предоставления услуги</a>. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href="ВАША ССЫЛКА НА ПРАВИЛА ПОКУПКИ">Правила покупки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a>
-  </p>
+<div class="rules" id="footer">
+  <div class="inner">
+    <span>Провайдер:ООО «Телеком Клуб»</span>
+    <span>claim@telecom-club.com</span>
+    <span>8-800-770-04-31</span>
+    <a href="#">Пользовательское соглашение</a>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -744,7 +722,7 @@ a_Short_numbers_stf.pdf">Условиями предоставления усл�
         footer['style']['bottom'] = "auto";
         footer['style']['top'] = (window['innerHeight'] - footer.offsetHeight) + 'px';
         if ((window['innerHeight'] > 212) && (window['innerHeight'] < 233)) {
-            buttonWrap['style']['marginTop'] = '-'+ (footer.offsetHeight-35) + 'px';
+            buttonWrap['style']['marginTop'] = '-'+ (footer.offsetHeight-55) + 'px';
         } else { buttonWrap['style']['marginTop'] = 0; }
 
         document.body.style.height = window.innerHeight + 'px';
